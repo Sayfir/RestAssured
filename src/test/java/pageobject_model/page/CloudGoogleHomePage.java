@@ -2,8 +2,6 @@ package pageobject_model.page;
 
 import org.openqa.selenium.WebDriver;
 
-import static pageobject_model.service.UrlReader.TESTDATA_HOMEPAGE_URL;
-
 public class CloudGoogleHomePage extends BasePage {
 
     public CloudGoogleHomePage(WebDriver driver) {
@@ -12,7 +10,7 @@ public class CloudGoogleHomePage extends BasePage {
 
     @Override
     public CloudGoogleHomePage openPage() {
-        driver.get(TESTDATA_HOMEPAGE_URL);
+        driver.get("https://cloud.google.com/");
         logger.info("Home page was opened");
         driver.manage().window().maximize();
         return this;

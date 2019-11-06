@@ -88,7 +88,7 @@ public class CloudGoogleCalculatorPage extends BasePage {
         switchToCalculatorPageFrame().fillInstancesNumberField()
                 .chooseMachineType().activateGpuCheckbox()
                 .chooseGpuNumber().chooseGpuType().chooseLocalSsd()
-                .chooseDataCenter().chooseCommittedUsage().submitButton.click();
+                .chooseDataCenter().chooseCommittedUsage().clickSubmitButton();
         return this;
     }
 
@@ -149,6 +149,11 @@ public class CloudGoogleCalculatorPage extends BasePage {
         FormFillingUtils.choosingElementFromDropdown(driver, "//md-select[@placeholder='Committed usage']/md-select-value",
                 committedUsageDropdown, "//*[@class='md-select-menu-container md-active md-clickable']//*[@value='1']",
                 committedUsageDropdownElement);
+        return this;
+    }
+
+    public CloudGoogleCalculatorPage clickSubmitButton(){
+     submitButton.click();
         return this;
     }
 
