@@ -1,7 +1,8 @@
 Feature:
 
   Background:
-    Given I open Contact page
+    Given I open Home page
+    And I click on Contact sales link
 
   Scenario Outline:
     And I fill in contact form

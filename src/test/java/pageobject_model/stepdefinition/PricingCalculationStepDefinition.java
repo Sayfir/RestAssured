@@ -1,9 +1,9 @@
 package pageobject_model.stepDefinition;
 
-import cucumber.annotation.en.And;
-import cucumber.annotation.en.Given;
-import cucumber.annotation.en.Then;
-import cucumber.annotation.en.When;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.testng.Assert;
 import pageobject_model.page.CloudGoogleCalculatorPage;
 import pageobject_model.page.DriverContainer;
