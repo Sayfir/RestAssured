@@ -1,4 +1,4 @@
-package pageobject_model.stepdefinition;
+package pageobject_model.stepDefinition;
 
 import cucumber.annotation.en.And;
 import cucumber.annotation.en.Given;

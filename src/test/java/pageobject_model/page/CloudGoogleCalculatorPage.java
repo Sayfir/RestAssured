@@ -8,7 +8,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import pageobject_model.utils.FormFillingUtils;
 import pageobject_model.utils.SwitchingToFrameUtils;
-import pageobject_model.utils.TakingScreenshotUtils;
 import pageobject_model.utils.WaitersUtils;
 
 import java.awt.*;
@@ -117,7 +116,6 @@ public class CloudGoogleCalculatorPage extends BasePage {
     }
 
     public CloudGoogleCalculatorPage chooseGpuNumber() throws IOException, AWTException {
-        TakingScreenshotUtils.takeScreenshot();
         FormFillingUtils.choosingElementFromDropdown(driver, "//md-select[@placeholder='Number of GPUs']/md-select-value",
                 gpuNumberDropdown, "//*[@class='md-select-menu-container md-active md-clickable']//md-option[@value='1']",
                 gpuNumberDropdownElement);
@@ -152,8 +150,8 @@ public class CloudGoogleCalculatorPage extends BasePage {
         return this;
     }
 
-    public CloudGoogleCalculatorPage clickSubmitButton(){
-     submitButton.click();
+    public CloudGoogleCalculatorPage clickSubmitButton() {
+        submitButton.click();
         return this;
     }
 
