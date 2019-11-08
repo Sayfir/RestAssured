@@ -11,7 +11,6 @@ public class CloudGoogleHomePage extends BasePage {
     @Override
     public CloudGoogleHomePage openPage() {
         driver.get("https://cloud.google.com/");
-        logger.info("Home page was opened");
         driver.manage().window().maximize();
         return this;
     }
