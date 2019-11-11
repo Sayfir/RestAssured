@@ -63,7 +63,7 @@ public class CloudGoogleContactPage extends BasePage {
                                            String email, String phoneNumber, String companyName,
                                            String googleSignUp) {
         fillFirstName(firstName).fillFirstName(lastName)
-                .fillJobTitle(jobTitle).fillEmail(email).fillPhoneNumber(phoneNumber)
+                .fillJobTitle(jobTitle).fillEmail(email).fillPhoneNumber(Long.parseLong(phoneNumber))
                 .fillCompanyName(companyName).chooseIndustry().chooseGoogleSignUp(googleSignUp);
         {
             return this;
@@ -90,8 +90,8 @@ public class CloudGoogleContactPage extends BasePage {
         return this;
     }
 
-    public CloudGoogleContactPage fillPhoneNumber(String phoneNumber) {
-        FormFillingUtils.fillTextField(driver, "//input[@id='phone-number']", this.phoneNumber, phoneNumber);
+    public CloudGoogleContactPage fillPhoneNumber(long phoneNumber) {
+        FormFillingUtils.fillTextField(driver, "//input[@id='phone-number']", this.phoneNumber, String.valueOf(phoneNumber));
         return this;
     }
 

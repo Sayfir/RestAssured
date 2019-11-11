@@ -1,3 +1,4 @@
+@ignore
 Feature:
 
   Background:
@@ -5,6 +6,7 @@ Feature:
     And I fill in calculation form
     When I press Add to Estimate
 
+    @positiveTests
   Scenario:
     Then USD 1,187.77 per 1 month is displayed
 
