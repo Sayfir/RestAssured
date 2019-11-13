@@ -6,7 +6,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import pageobject_model.utils.FormFillingUtils;
 
-
 public class CloudGoogleContactPage extends BasePage {
 
     @FindBy(xpath = "//input[@id='first-name']")
@@ -54,20 +53,37 @@ public class CloudGoogleContactPage extends BasePage {
     }
 
     @Override
+    public WebElement getElementByName(Object elementName) {
+        WebElement result = null;
+        switch ((String) elementName) {
+            case "firstName":
+                result = firstName;
+                break;
+            case "lastName":
+                result = lastName;
+                break;
+            case "jobTitle":
+                result = jobTitle;
+                break;
+            case "email":
+                result = email;
+                break;
+            case "phoneNumber":
+                result = phoneNumber;
+                break;
+            case "companyName":
+                result = companyName;
+                break;
+            default:
+                new Exception("No such element found!");
+        }
+        return result;
+    }
+
+    @Override
     public CloudGoogleContactPage openPage() {
         driver.get("https://cloud.google.com/contact/");
         return this;
-    }
-
-    public CloudGoogleContactPage fillForm(String firstName, String lastName, String jobTitle,
-                                           String email, String phoneNumber, String companyName,
-                                           String googleSignUp) {
-        fillFirstName(firstName).fillFirstName(lastName)
-                .fillJobTitle(jobTitle).fillEmail(email).fillPhoneNumber(Long.parseLong(phoneNumber))
-                .fillCompanyName(companyName).chooseIndustry().chooseGoogleSignUp(googleSignUp);
-        {
-            return this;
-        }
     }
 
     public CloudGoogleContactPage fillFirstName(String firstName) {
@@ -106,16 +122,21 @@ public class CloudGoogleContactPage extends BasePage {
         return this;
     }
 
-    public CloudGoogleContactPage chooseGoogleSignUp(String googleSignUp) {
+    public WebElement chooseGoogleSignUp(String googleSignUp) {
+        WebElement result = null;
         switch (googleSignUp) {
             case "Yes": {
-                this.optionYes.click();
+                result = optionYes;
+                result.click();
+                break;
             }
             case "No": {
-                this.optionNo.click();
+                result = optionNo;
+                result.click();
+                break;
             }
         }
-        return this;
+        return result;
     }
 
     public CloudGoogleContactPage clickSubmitButton() {

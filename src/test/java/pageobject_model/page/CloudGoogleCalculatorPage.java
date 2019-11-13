@@ -76,6 +76,11 @@ public class CloudGoogleCalculatorPage extends BasePage {
         return null;
     }
 
+    @Override
+    protected WebElement getElementByName(Object elementName) {
+        return null;
+    }
+
     public CloudGoogleCalculatorPage openPage() {
         WaitersUtils.waitUntilClickable("//a[@href='https://cloud.google.com/pricing/calculators']", driver);
         calculatorsTab.click();

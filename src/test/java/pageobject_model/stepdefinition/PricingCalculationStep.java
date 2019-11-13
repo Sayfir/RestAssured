@@ -11,7 +11,7 @@ import pageobject_model.page.DriverContainer;
 import java.awt.*;
 import java.io.IOException;
 
-public class PricingCalculationStepDefinition extends DriverContainer {
+public class PricingCalculationStep extends DriverContainer {
 
     CloudGoogleCalculatorPage calculatorPage = new CloudGoogleCalculatorPage(driver);
 

@@ -28,4 +28,9 @@ public class CloudGooglePricingPage extends BasePage {
         PageFactory.initElements(driver, this);
         return null;
     }
+
+    @Override
+    protected WebElement getElementByName(Object elementName) {
+        return null;
+    }
 }

@@ -6,10 +6,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "features",
-        glue = "stepDefinition",
-        tags = {"~ignore"},
+        features = "D:\\Work\\IdeaProjects\\BddOrigin\\src\\test\\resources\\features",
+        glue = "pageobject_model.stepDefinition",
+        tags = {"@test"},
         strict = true,
         plugin = {"pretty", "html:target/cucumber"})
 public class testRunner {
+
 }

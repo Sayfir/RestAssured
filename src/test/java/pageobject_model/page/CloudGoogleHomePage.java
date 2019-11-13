@@ -1,6 +1,7 @@
 package pageobject_model.page;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class CloudGoogleHomePage extends BasePage {
 
@@ -17,5 +18,10 @@ public class CloudGoogleHomePage extends BasePage {
 
     protected BasePage initElements() {
         return this;
+    }
+
+    @Override
+    protected WebElement getElementByName(Object elementName) {
+        return null;
     }
 }

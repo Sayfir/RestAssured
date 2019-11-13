@@ -23,6 +23,11 @@ public class CloudGoogleProductsPage extends BasePage {
         return null;
     }
 
+    @Override
+    protected WebElement getElementByName(Object elementName) {
+        return null;
+    }
+
     public CloudGoogleProductsPage openPage() throws InterruptedException {
         productsTab.click();
         seeAllProductsLink.click();
