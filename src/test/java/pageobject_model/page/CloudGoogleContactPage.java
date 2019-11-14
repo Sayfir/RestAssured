@@ -86,36 +86,6 @@ public class CloudGoogleContactPage extends BasePage {
         return this;
     }
 
-    public CloudGoogleContactPage fillFirstName(String firstName) {
-        FormFillingUtils.fillTextField(driver, "//input[@id='first-name']", this.firstName, firstName);
-        return this;
-    }
-
-    public CloudGoogleContactPage fillLastName(String lastName) {
-        FormFillingUtils.fillTextField(driver, "//input[@id='last-name']", this.lastName, lastName);
-        return this;
-    }
-
-    public CloudGoogleContactPage fillJobTitle(String jobTitle) {
-        FormFillingUtils.fillTextField(driver, "//input[@id='job-title']", this.jobTitle, jobTitle);
-        return this;
-    }
-
-    public CloudGoogleContactPage fillEmail(String email) {
-        FormFillingUtils.fillTextField(driver, "//input[@id='email']", this.email, email);
-        return this;
-    }
-
-    public CloudGoogleContactPage fillPhoneNumber(long phoneNumber) {
-        FormFillingUtils.fillTextField(driver, "//input[@id='phone-number']", this.phoneNumber, String.valueOf(phoneNumber));
-        return this;
-    }
-
-    public CloudGoogleContactPage fillCompanyName(String companyName) {
-        FormFillingUtils.fillTextField(driver, "//input[@id='company']", this.companyName, companyName);
-        return this;
-    }
-
     public CloudGoogleContactPage chooseIndustry() {
         FormFillingUtils.choosingElementFromDropdown(driver, "//input[@id='industry']", industryDropdown,
                 "//*[@id='industry']/option[2]", this.industryDropdownElement);
